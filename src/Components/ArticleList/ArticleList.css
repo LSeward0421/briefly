@@ -1,0 +1,11 @@
+.article-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(30%, 300px, 1fr), 1fr));
+  grid-gap: 2%;
+  padding: 2%;
+}
+
+.article-list a {
+  text-decoration: none;
+  color: inherit;
+}

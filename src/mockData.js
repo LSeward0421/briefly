@@ -70,6 +70,32 @@ const mockData = {
       content:
         'Nato has condemned as "totally unacceptable" attacks by demonstrators in Kosovo that left some 25 of its peacekeepers injured. \r\nPolice and Nato troops clashed with Serb protesters in the north where… [+3917 chars]',
     },
+    {
+      "source": {
+        "id": null,
+        "name": "Hollywood Reporter"
+      },
+      "author": "Tyler Coates",
+      "title": "‘Barry’ Star Sarah Goldberg on Sally’s Final Moments: “Finally, She Has Some Peace” - Hollywood Reporter",
+      "description": "The actress talks to The Hollywood Reporter about her character's journey across season four and her excitement about getting to film scenes with costar Anthony Carrigan as NoHo Hank.",
+      "url": "https://www.hollywoodreporter.com/tv/tv-features/barry-sarah-goldberg-series-finale-interview-1235502141/",
+      "urlToImage": "https://www.hollywoodreporter.com/wp-content/uploads/2023/05/BAR_408_111522_MM_3144-H-2023.jpg?w=1024",
+      "publishedAt": "2023-05-29T19:46:00Z",
+      "content": "[This story contains major spoilers from the series finale of Barry, “Wow.”]\r\nIt’d be understandable if you expected things not to work out for Sarah Goldberg’s Sally Reed in the series finale of HBO… [+17914 chars]"
+    },
+    {
+      "source": {
+        "id": "abc-news",
+        "name": "ABC News"
+      },
+      "author": "Emily Shapiro, Matt Foster",
+      "title": "2 inmates escape from Mississippi jail weeks after 4 others broke out from same facility - ABC News",
+      "description": "Michael Lewis and Joseph Spring were missing at Monday morning’s headcount.",
+      "url": "https://abcnews.go.com/US/2-inmates-escape-mississippi-jail-weeks-after-4/story?id=99678616",
+      "urlToImage": "https://s.abcnews.com/images/US/hinds-county-sheriff-ht-lv-230529_1685385154714_hpMain_16x9_992.jpg",
+      "publishedAt": "2023-05-29T19:33:28Z",
+      "content": "Two inmates allegedly escaped from a Mississippi jail on Monday, just weeks after four others broke out from the same facility.\r\nMichael Lewis and Joseph Spring were both found missing during Monday … [+542 chars]"
+    },
   ],
 };
 

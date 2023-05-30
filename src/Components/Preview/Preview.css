@@ -1,0 +1,28 @@
+.preview-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: clamp(0.8%, 8px, 2%);
+  padding: clamp(0.8%, 15px, 2%);
+  transition: all 0.3s ease;
+  transform: scale(0.9)
+}
+
+.preview-container h2 {
+  margin-bottom: clamp(0.8%, 12px, 1.5%);
+}
+
+.preview-container img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: clamp(0.8%, 12px, 1.5%);
+}
+
+.preview-container p {
+  margin-bottom: clamp(0.8%, 8px, 1%);
+}
+
+.preview-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}

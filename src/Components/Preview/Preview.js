@@ -1,11 +1,13 @@
 import "./Preview.css";
 
-const Preview = () => {
+const Preview = ({ article }) => {
+  const { title, description, urlToImage, publishedAt } = article;
   return (
     <div className="preview-container">
-      <h2> Article Title</h2>
-      <p> Description...</p>
-      <img src="img src" alt="image alt" />
+      <p>{new Date(publishedAt).toLocaleDateString()}</p>
+      <h2>{title}</h2>
+      {urlToImage && <img src={urlToImage} alt={title} />}
+      {description && <p>{description}</p>}
     </div>
   );
 };
