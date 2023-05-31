@@ -1,8 +1,18 @@
+.list-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1%;
+}
+
 .article-list {
   display: grid;
+  justify-content: center;
+  align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(clamp(30%, 300px, 1fr), 1fr));
-  grid-gap: 2%;
-  padding: 2%;
+  grid-gap: 1%;
+  padding: 1%;
+  max-width: 70%;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .article-list a {

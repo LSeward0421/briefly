@@ -14,8 +14,8 @@ const ArticleList = ({ articles }) => {
   };
 
   return (
-    <div className="article-list">
-      {generatePreviews()}
+    <div className="list-container">
+      <div className="article-list">{generatePreviews()}</div>
     </div>
   );
 };
