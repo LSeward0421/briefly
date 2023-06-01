@@ -2,7 +2,6 @@ import "./Preview.css";
 
 const Preview = ({ article }) => {
   const { title, description, urlToImage, publishedAt } = article;
-  console.log(publishedAt)
   return (
     <div className="preview-container">
       <p>{new Date(publishedAt).toLocaleDateString()}</p>
