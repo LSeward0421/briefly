@@ -6,28 +6,50 @@ import SearchBar from "../SearchBar/SearchBar";
 import ArticleList from "../ArticleList/ArticleList";
 import ArticleDetail from "../ArticleDetail/ArticleDetail";
 import NotFound from "../NotFound/NotFound";
-// import mockData from "../../mockData";
 import fetchArticles from "../../apiCalls";
 
 const App = () => {
-  const [articles, setArticles] = useState([])
+  const [articles, setArticles] = useState([]);
+  const [search, setSearch] = useState("");
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const getArticles = async () => {
-      const topArticles = await fetchArticles();
-      setArticles(topArticles.map((article, index) => ({ ...article, id: index })));
-    };
-
-    getArticles();
+    handleSearch();
   }, []);
+
+  const handleSearch = async (query = "") => {
+    setLoading(true);
+    try {
+      const searchArticles = await fetchArticles(query);
+      setArticles(
+        searchArticles.map((article, index) => ({ ...article, id: index }))
+      );
+      setError(null);
+    } catch (error) {
+      setError(`Uh-oh! Something went wrong. Please refresh the page.${error.message}`);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const clearSearch = () => {
+    setSearch("");
+    handleSearch("");
+  };
 
   return (
     <div className="App">
+      {error && <p className="error-msg">{error}</p>}
       <Header />
       <Switch>
         <Route exact path="/">
-          <SearchBar />
-          <ArticleList articles={articles} />
+          <SearchBar
+            onSearch={handleSearch}
+            onClearSearch={clearSearch}
+            search={search}
+          />
+          {loading ? <p>Loading...</p> : <ArticleList articles={articles} />}
         </Route>
         <Route path="/article/:id">
           <ArticleDetail articles={articles} />

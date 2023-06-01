@@ -11,7 +11,7 @@ const fetchArticles = async (query = null) => {
     const response = await fetch(url);
 
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+      throw new Error(`Status: ${response.status}`);
     }
 
     const data = await response.json();
