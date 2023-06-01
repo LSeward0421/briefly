@@ -9,7 +9,7 @@ A news reader web application that pulls articles from the News API.
 - [Preview](#preview)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Planning Links](#project-board-and-wireframe)
+- [Planning Links](#planning-links)
 - [Author](#author)
 
 ## Introduction
@@ -37,7 +37,7 @@ Welcome to Briefly, your go-to news reader application! Briefly allows you to st
 
 ![Responsive](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDI3NDBlMTNlYWIxZTJjZDRkMTMwYTU0ZDQyYWYwNGM5YzAzMzk2NyZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/eQ6SQzWz4tYQXBQt81/giphy.gif)
 
-## Project Board & Wireframe
+## Planning Links
 - [Project Board](https://github.com/users/LSeward0421/projects/3/views/1?reload=true)
 - [Wireframe](https://www.canva.com/design/DAFkaiI7clI/hrOFgEom-0-Bne1MTfpRPA/edit?utm_content=DAFkaiI7clI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
