@@ -1,0 +1,32 @@
+{
+  "status": "ok",
+  "totalResults": 9708,
+  "articles": [
+    {
+      "source": {
+        "id": "engadget",
+        "name": "Engadget"
+      },
+      "author": "Mariella Moon",
+      "title": "White House proposes 30 percent tax on electricity used for crypto mining",
+      "description": "The Biden administration wants to impose a 30 percent tax on the electricity used by cryptocurrency mining operations, and it has included the proposal in its budget for the fiscal year of 2024. In a blog post on the White House website, the administration ha…",
+      "url": "https://www.engadget.com/white-house-proposes-30-percent-tax-on-electricity-used-for-crypto-mining-090342986.html",
+      "urlToImage": "https://s.yimg.com/uu/api/res/1.2/_0lUWxV0epaYKnRPQ1.Jxw--~B/Zmk9ZmlsbDtoPTYzMDtweW9mZj0wO3c9MTIwMDthcHBpZD15dGFjaHlvbg--/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-uploaded-images/2023-05/5d8f2740-e97d-11ed-b4b3-dfb213c6d348.cf.jpg",
+      "publishedAt": "2023-05-03T09:03:42Z",
+      "content": "The Biden administration wants to impose a 30 percent tax on the electricity used by cryptocurrency mining operations, and it has included the proposal in its budget for the fiscal year of 2024. In a… [+3408 chars]"
+    },
+    {
+      "source": {
+        "id": "wired",
+        "name": "Wired"
+      },
+      "author": "Jessica Maddox",
+      "title": "The Hidden Dangers of the Decentralized Web",
+      "description": "From social networks to crypto, independently run servers are being touted as a solution to the internet’s problems. But they’re far from a magic bullet.",
+      "url": "https://www.wired.com/story/the-hidden-dangers-of-the-decentralized-web/",
+      "urlToImage": "https://media.wired.com/photos/6466a28c9ec11a2433532a66/191:100/w_1280,c_limit/Cons_Social.jpg",
+      "publishedAt": "2023-05-19T12:00:00Z",
+      "content": "When Elon Musk took over Twitter last year, many users migrated to the free and open-source platform Mastodon. Mastodon, like other decentralized social media, isnt owned by one of the major players … [+4331 chars]"
+    }
+  ]
+}
