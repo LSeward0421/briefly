@@ -1,9 +1,10 @@
 import format from "date-fns/format";
 
 const fetchArticles = async (query = null, startDate = null, endDate = null ) => {
+  const apiKey = process.env.REACT_APP_NEWS_API_KEY;
   let url;
   if (query) {
-    url = `https://newsapi.org/v2/everything?q=${query}&apiKey=857b36c832434ecbbd97504cb441c9e3`;
+    url = `https://newsapi.org/v2/everything?q=${query}&apiKey=${apiKey}`;
     if (startDate) {
       url += `&from=${format(startDate, "yyyy-MM-dd")}`
     }
@@ -12,7 +13,7 @@ const fetchArticles = async (query = null, startDate = null, endDate = null ) =>
     }
   } else {
     url =
-      "https://newsapi.org/v2/top-headlines?country=us&apiKey=857b36c832434ecbbd97504cb441c9e3";
+      `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`;
   }
 
   try {
