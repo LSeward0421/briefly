@@ -3,17 +3,26 @@
   height: clamp(50px, 10vh, 70px);
   justify-content: center;
   align-items: center;
-  background-color: #1127527e;
+  background-color: #f4f2f67e;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5 );
-  z-index: 10;
-  padding: 0 5%;
+  padding: .5rem;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
 }
 
 .header-link {
   text-decoration: none;
-  color: #fff;
+  color: #080808;
   font-family: 'Lobster', cursive;
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(1.7rem, 2vw, 1.5rem);
+}
+
+.header-logo {
+  max-width: 5rem;
+  margin-left: 1rem;;
 }
 
 .header h1 {
