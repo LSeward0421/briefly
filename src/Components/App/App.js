@@ -13,21 +13,25 @@ const App = () => {
   const [search, setSearch] = useState("");
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
 
   useEffect(() => {
     handleSearch();
   }, []);
 
-  const handleSearch = async (query = "") => {
+  const handleSearch = async (query = "", startDate, endDate) => {
     setLoading(true);
     try {
-      const searchArticles = await fetchArticles(query);
+      const searchArticles = await fetchArticles(query, startDate, endDate);
       setArticles(
         searchArticles.map((article, index) => ({ ...article, id: index }))
       );
       setError(null);
     } catch (error) {
-      setError(`Uh-oh! Something went wrong. Please refresh the page.${error.message}`);
+      setError(
+        `Uh-oh! Something went wrong. Please refresh the page.${error.message}`
+      );
     } finally {
       setLoading(false);
     }
@@ -48,6 +52,10 @@ const App = () => {
             onSearch={handleSearch}
             onClearSearch={clearSearch}
             search={search}
+            startDate={startDate}
+            onStartDateChange={setStartDate}
+            endDate={endDate}
+            onEndDateChange={setEndDate}
           />
           {loading ? <p>Loading...</p> : <ArticleList articles={articles} />}
         </Route>
