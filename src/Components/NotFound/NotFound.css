@@ -1,0 +1,7 @@
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  font-family: 'Lobster', cursive;
+}
