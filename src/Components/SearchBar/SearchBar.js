@@ -55,6 +55,7 @@ const SearchBar = ({
           value={input}
           onChange={handleInputChange}
           placeholder="Search for articles.."
+          aria-label="Search for articles"
         />
         <DatePicker
           selected={startDate}
@@ -65,6 +66,7 @@ const SearchBar = ({
           minDate={subDays(new Date(), 30)}
           maxDate={addDays(new Date(), 0)}
           placeholderText="Start date"
+          aria-label="Select start date"
         />
         <DatePicker
           selected={endDate}
@@ -75,6 +77,7 @@ const SearchBar = ({
           minDate={startDate || subDays(new Date(), 30)}
           maxDate={addDays(new Date(), 0)}
           placeholderText="End date"
+          aria-label="Select end date"
         />
         <button type="submit" className="submit-search-btn">
           SEARCH
