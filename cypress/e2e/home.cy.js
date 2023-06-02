@@ -1,11 +1,22 @@
 describe('Home Page', () => {
   beforeEach(() => {
-    cy.intercept('GET', `https://newsapi.org/v2/top-headlines?country=us&apiKey=${Cypress.env('REACT_APP_NEWS_API_KEY')}`, { fixture: 'mockData.json' }).as('getArticles');
+    cy.intercept('GET', 'https://newsapi.org/v2/top-headlines?country=us&apiKey=*', { fixture: 'mockData.json' }).as('getArticles');
     cy.visit(' http://localhost:3000/');
   });
 
   it('should display a list of articles', () => {
-    cy.get('.preview-container').should('have.length', 20);
+    cy.get('.preview-container').should('have.length', 5);
+  }); 
+
+it('should display elements on each preview container', () => {
+    cy.get('.preview-container').each(($preview) => {
+      cy.wrap($preview).within(() => {
+        cy.get('p').first().should('exist');
+        cy.get('h2').should('exist');
+        cy.get('img').should('exist');
+        cy.get('p').last().should('exist');
+      });
+    });
   });
 
   it('should allow the user to search for articles', () => {
@@ -29,6 +40,16 @@ describe('Home Page', () => {
     cy.get('.header-title').click();
     cy.url().should('not.include', '/article/0');
     cy.get('.preview-container').should('have.length.at.least', 1);
+  });
+
+  it('should display an error message when the API returns a 400 error', () => {
+    cy.intercept(
+      { method: 'GET', url: '**/v2/*' },
+      { statusCode: 400 }
+    ).as('getArticlesError');
+  
+    cy.visit('http://localhost:3000/');
+    cy.get('.error-msg').should('be.visible');
   });
   
   it('should display an error message when the API returns a 500 error', () => {
